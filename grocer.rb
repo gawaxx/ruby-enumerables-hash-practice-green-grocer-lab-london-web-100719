@@ -1,6 +1,6 @@
 def consolidate_cart(cart)
   consolidate = {}
-  
+  cart.map {|item| }
 end
 
 def apply_coupons(cart, coupons)
