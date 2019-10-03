@@ -1,5 +1,5 @@
 def consolidate_cart(cart)
-  consolidate = {}
+  cart = {}
   cart.map {|item| item.values[0][:count] = 1}}
   i = 0 
   while i < cart.length do 
