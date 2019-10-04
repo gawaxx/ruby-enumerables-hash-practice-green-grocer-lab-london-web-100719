@@ -1,13 +1,13 @@
 def consolidate_cart(cart)
   theHash = {}
   cart.map do |item|
-    name = item.keys[0]
+    itemname = item.keys[0]
     details = item.values[0]
-    if theHash[name] 
-       theHash[name][:count] += 1 
+    if theHash[itemname] 
+       theHash[itemname][:count] += 1 
      else
-       theHash[name] = details
-       theHash[name][:count] = 1
+       theHash[itemname] = details
+       theHash[itemname][:count] = 1
     end
   end
   return theHash
