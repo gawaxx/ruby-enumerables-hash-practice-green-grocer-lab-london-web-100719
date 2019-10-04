@@ -1,15 +1,17 @@
 def consolidate_cart(cart)
   theHash = {}
-  cart.map {|item| item.values[0][:count] = 1}}
-  i = 0 
-  while i < cart.length do 
-    if theHash.key?(cart[i].keys[0])
-      theHash.values[cons_hash.keys.index(cart[i].keys[0])][:count] += 1
-    else
-      theHash = theHash.merge(cart[i])
+  cart.each do |item|
+    name = item.keys[0]
+    details = item.values[0]
+    if theHash[name] 
+       theHash[name][:count] += 1 
+     else
+       theHash[name] = details
+       theHash[name][:count] = 1
     end
-    return cons_hash
-
+  end
+  return cart_hash
+end 
 end
 
 def apply_coupons(cart, coupons)
