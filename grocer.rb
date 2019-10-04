@@ -3,14 +3,12 @@ def consolidate_cart(cart)
   cart.map {|item| item.values[0][:count] = 1}}
   i = 0 
   while i < cart.length do 
-  if theHash.key?(cart[i].keys[0])
-    theHash.values[cons_hash.keys.index(cart[i].keys[0])][:count] += 1
-  else
-    theHash = theHash.merge(cart[i])
-  end
-    i += 1
-  end
-  return cons_hash
+    if theHash.key?(cart[i].keys[0])
+      theHash.values[cons_hash.keys.index(cart[i].keys[0])][:count] += 1
+    else
+      theHash = theHash.merge(cart[i])
+    end
+    return cons_hash
 
 end
 
