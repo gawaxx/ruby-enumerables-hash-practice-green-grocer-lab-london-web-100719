@@ -1,6 +1,6 @@
 def consolidate_cart(cart)
   theHash = {}
-  cart.each do |item|
+  cart.map do |item|
     name = item.keys[0]
     details = item.values[0]
     if theHash[name] 
